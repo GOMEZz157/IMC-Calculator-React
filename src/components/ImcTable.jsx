@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-const ImcTable = ({ data, imc, info, infoClass }) => {
+const ImcTable = ({ data, imc, info, infoClass, resetCalc }) => {
   const colorMap = {
     good: "text-good",
     low: "text-low",
@@ -41,7 +41,12 @@ const ImcTable = ({ data, imc, info, infoClass }) => {
         ))}
       </div>
       {console.log(infoClass)}
-      <Button id="back-btn" text="Voltar" className="self-center" />
+      <Button
+        id="back-btn"
+        text="Voltar"
+        className="self-center"
+        action={resetCalc}
+      />
     </div>
   );
 };
