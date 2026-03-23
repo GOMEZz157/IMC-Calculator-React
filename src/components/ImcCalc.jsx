@@ -54,7 +54,11 @@ const ImcCalc = ({ calcImc }) => {
           />
         </div>
         <div id="action-control" className="flex justify-between gap-4 mt-8">
-          <Button id="calc-btn" text="Calcular" action={calcImc} />
+          <Button
+            id="calc-btn"
+            text="Calcular"
+            action={(e) => calcImc(e, height, weight)}
+          />
           <Button id="clear-btn" text="Limpar" action={clearForm} />
         </div>
       </form>
