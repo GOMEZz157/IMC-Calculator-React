@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "./Button";
 import FormInput from "./FormInput";
 
-const ImcCalc = () => {
+const ImcCalc = ({ calcImc }) => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
 
@@ -54,7 +54,7 @@ const ImcCalc = () => {
           />
         </div>
         <div id="action-control" className="flex justify-between gap-4 mt-8">
-          <Button id="calc-btn" text="Calcular" type="submit" />
+          <Button id="calc-btn" text="Calcular" action={calcImc} />
           <Button id="clear-btn" text="Limpar" action={clearForm} />
         </div>
       </form>
